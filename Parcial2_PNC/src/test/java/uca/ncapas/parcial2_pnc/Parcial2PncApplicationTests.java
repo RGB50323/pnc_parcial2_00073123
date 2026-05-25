@@ -1,0 +1,13 @@
+package uca.ncapas.parcial2_pnc;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class Parcial2PncApplicationTests {
+
+    @Test
+    void contextLoads() {
+    }
+
+}
