@@ -1,6 +1,6 @@
 spring:
   application:
-    name: Parcial2_PNC
+    name: magic_wand
 
   datasource:
     url: ${DB_URL}
