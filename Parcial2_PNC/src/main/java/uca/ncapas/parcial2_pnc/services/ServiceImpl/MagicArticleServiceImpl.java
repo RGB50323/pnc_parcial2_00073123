@@ -50,6 +50,9 @@ public class MagicArticleServiceImpl implements MagicArticleService {
     public MagicArticleResponse updateMagicArticle(UpdateMagicArticleRequest request, Long id) {
         this.getMagicArticleId(id);
 
+        if (magicArticleRepository.existsByNameIgnoringCase(request.getName()))
+            throw new ResourceNotFoundException("Name already exists");
+
         MagicProvider magicProvider = magicProviderRepository.findById(request.getMagicProviderId())
                 .orElseThrow(() -> new ResourceNotFoundException("Magic Provider not found"));
 
