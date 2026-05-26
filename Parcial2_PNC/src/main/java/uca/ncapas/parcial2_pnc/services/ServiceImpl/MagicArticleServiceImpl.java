@@ -42,6 +42,7 @@ public class MagicArticleServiceImpl implements MagicArticleService {
         MagicProvider magicProvider = magicProviderRepository.findById(request.getMagicProviderId())
                 .orElseThrow(() -> new ResourceNotFoundException("Magic Provider not found"));
 
+
         return magicArticleMapper.toDto(magicArticleRepository.save(magicArticleMapper.toEntityCreate(request, magicProvider)));
     }
 
